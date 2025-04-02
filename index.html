@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Card Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Memory Card Game</h1>
+        
+        <div class="game-controls">
+            <div class="difficulty-selector">
+                <label for="difficulty">Difficulty:</label>
+                <select id="difficulty">
+                    <option value="easy">Easy (4x4)</option>
+                    <option value="medium">Medium (4x5)</option>
+                    <option value="hard">Hard (6x6)</option>
+                </select>
+            </div>
+            <button id="new-game-btn">New Game</button>
+        </div>
+        
+        <div class="game-info">
+            <div class="info-box">
+                <i class="fas fa-clock"></i>
+                <span id="time">0</span>s
+            </div>
+            <div class="info-box">
+                <i class="fas fa-shoe-prints"></i>
+                <span id="moves">0</span> moves
+            </div>
+            <div class="info-box">
+                <i class="fas fa-star"></i>
+                <span id="score">0</span> points
+            </div>
+        </div>
+        
+        <div id="game-board" class="game-board easy"></div>
+        
+        <div id="congrats-modal" class="modal">
+            <div class="modal-content">
+                <h2>Congratulations! 🎉</h2>
+                <p>You completed the game in <span id="final-time">0</span> seconds!</p>
+                <p>Total moves: <span id="final-moves">0</span></p>
+                <p>Your score: <span id="final-score">0</span></p>
+                <button id="play-again-btn">Play Again</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
